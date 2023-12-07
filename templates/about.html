@@ -1,0 +1,35 @@
+{% extends "wrapper.html" %}
+
+{% block content %}
+
+    <h1>How does it work?</h1>
+    <p>
+        The idea is simple: this program takes your VK-profile and makes a request to VK-servers to collect the list of
+        your open and visible groups. Because VK provides an open API for such requests, program cannot just go and
+        collect everything it wants, so it takes only open and available information. Also it is totally anonimous,
+        because there is absolutely no need for your name/other stuff for the анализа.
+    </p>
+    <p>After receiving the VK-server response program scrapes the unique ids of the public groups from your profile and
+        makes a long vector of them. Then it fits this vector to the model, and model returns a prediction: 20 numbers
+        in percents, which describe mostly the belonging to a specific class.</p>
+    <p>The final prediction is made by finding the max value in the answer of the AI-model. However, all persentages for
+        all classes also are provided at the result-page, so you can see all the variants. Sometimes the difference will
+        be so small, that you might actually have two or three possible variants, that are suited for you.</p>
+    {#    <p align="center">Nunc mattis enim ut tellus elementum sagittis vitae et leo. Netus et malesuada fames ac turpis#}
+    {#        egestas integer eget. Auctor eu augue ut lectus. Nec tincidunt praesent semper feugiat nibh sed. Cras fermentum#}
+    {#        odio eu feugiat pretium nibh ipsum consequat. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed#}
+    {#        ullamcorper. Id velit ut tortor pretium viverra. Orci dapibus ultrices in iaculis nunc sed augue. Tortor posuere#}
+    {#        ac ut consequat semper viverra nam libero. Augue lacus viverra vitae congue eu consequat.</p>#}
+    {##}
+    {#    <p align="center">Risus nullam eget felis eget nunc. Turpis egestas integer eget aliquet. Cras semper auctor neque vitae tempus#}
+    {#        quam pellentesque nec. Urna porttitor rhoncus dolor purus. Magna etiam tempor orci eu lobortis elementum nibh#}
+    {#        tellus molestie. Id porta nibh venenatis cras sed felis eget velit. Nec sagittis aliquam malesuada bibendum arcu#}
+    {#        vitae elementum curabitur vitae. Sagittis id consectetur purus ut. Ut placerat orci nulla pellentesque. In#}
+    {#        dictum non consectetur a erat nam. Ut sem nulla pharetra diam sit amet.</p>#}
+
+{% endblock content %}
+
+{% block footercontent %}
+    <a class="btn btn-outline-info" href="{{ url_for('main.index') }}">Back</a>
+    <a class="btn btn-outline-info" href="{{ url_for('main.about') }}">How does it work?</a>
+{% endblock footercontent %}

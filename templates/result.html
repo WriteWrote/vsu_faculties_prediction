@@ -1,0 +1,51 @@
+{% extends "wrapper.html" %}
+
+{% block content %}
+
+    <h1>The Prediction</h1>
+    {#    <p>Это значит, что... Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Fusce id#}
+    {#        velit ut tortor pretium viverra. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi.#}
+    {#        Auctor urna nunc id cursus metus aliquam. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non.</p>#}
+    {#    <p>Tempus quam pellentesque nec nam aliquam sem et tortor consequat. Enim facilisis gravida neque convallis a cras#}
+    {#        semper auctor neque. Integer enim neque volutpat ac. Amet porttitor eget dolor morbi non arcu risus quis varius.#}
+    {#        Nisl vel pretium lectus quam id leo.</p>#}
+
+    <div class="wrapper">
+        <div class="box1">
+            <!--<h4>85%</h4>
+            <h5>Гуманитарий</h5>-->
+        </div>
+        <div class="box2">
+            <!-- <p>Non diam phasellus vestibulum lorem. Potenti nullam ac tortor vitae purus faucibus.</p> -->
+            <h3>{{ result }}</h3>
+        </div>
+        <div class="box3">
+            <!--<h4>15%</h4>
+            <h5>Технарь</h5>-->
+        </div>
+    </div>
+    <table align="center">
+        {% for i in range(length) %}
+            <tr>
+                <td>{{ classes[i] }}:</td>
+                <td>{{ predictions[0][i] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <p>Congrats! Now you know how your VK-page is describing you as a future student. You can rely on this result to
+        the extent, that your personal interests are mostly suitable for developing in this particular knowledge
+        field</p>
+    <p>But of course you should remember that this is not the final decision and people personalities ara far more
+        various than just an AI-test. If you are willing to develop in other professional sphere, you can take this
+        prediction (or your dissatisfaction with this prediction, speaking more clearly) as a final confirmation to your
+        personal decision.</p>
+    <p>Also, if you think that the result is not correct for you, you can help this project by filling the respond-form
+        down below. We will take your result and correct the AI-model, so it's accuracy will significantly rise!</p>
+
+{% endblock content %}
+
+{% block footercontent %}
+    <a class="btn btn-outline-info" href="{{ url_for('main.index') }}">Try again</a>
+    <a class="btn btn-outline-info" href="{{ url_for('main.about') }}">How does it work?</a>
+{% endblock footercontent %}

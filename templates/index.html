@@ -1,0 +1,78 @@
+{% extends "wrapper.html" %}
+
+{% block content %}
+
+    <main role="main" class="container">
+        <div class="container bootstrap snippets bootdeys">
+            <div class="col-md-12 col-md-offset-2">
+                <h1>Greetings!</h1>
+                <h3>What is it about?</h3>
+                <p>This is a project of fourth-grade student of Voronezh State University!
+                    It was dedicated to attempt to solve the problem of self-awareness in the aspect of most suiting
+                    professional skills and willingness to learn some particular knowledge from the university.</p>
+                <p>This is the quick but reliable test for young and bold, who want to learn something new about
+                    themselves or confirm
+                    their own decisions, so they can choose the most suitable for their personal traits faculty of the
+                    VSU.</p>
+                {#                <p>In eu mi bibendum neque egestas congue quisque. Porttitor eget dolor morbi non arcu. In mollis nunc#}
+                {#                    sed id semper. Leo urna molestie at elementum eu facilisis sed odio. Cum sociis natoque penatibus et#}
+                {#                    magnis dis. Nec nam aliquam sem et tortor consequat. Urna nunc id cursus metus. Lectus sit amet est#}
+                {#                    placerat in egestas. Suspendisse sed nisi lacus sed viverra tellus in. Facilisi cras fermentum odio#}
+                {#                    eu feugiat pretium. Vitae turpis massa sed elementum tempus. At volutpat diam ut venenatis tellus in#}
+                {#                    metus vulputate eu. Molestie nunc non blandit massa enim nec dui nunc. Enim facilisis gravida neque#}
+                {#                    convallis a cras semper auctor neque. Curabitur vitae nunc sed velit dignissim.</p>#}
+                <h3>How does it works?</h3>
+                <p>The key is a modern approach to the old problem. This project is trying to prove the theory that
+                    people can leave a tonn of information about their personalities unconsciously, while simply surfing
+                    the internet. So it must be possible to analyse the so be said <b>digital footprints</b>, which person
+                    lefts behind, for example, liking some posts in the Instagram or Facebook or VK (etc, etc, etc...)
+                </p>
+                <p>In this project specially constructed and trained AI-model takes <b>digital footprints</b> конкретного
+                    человека and creates a prediction to which faculty should they try to apply. Model can spot some
+                    nontrivial patterns, which may result in surprising predictions!</p>
+                {#                <p>Scelerisque in dictum non consectetur. Dolor magna eget est lorem ipsum dolor. Arcu dui vivamus arcu#}
+                {#                    felis bibendum ut tristique et egestas. Fermentum posuere urna nec tincidunt praesent semper. Non#}
+                {#                    consectetur a erat nam at lectus urna. Suspendisse interdum consectetur libero id faucibus.#}
+                {#                    Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Aenean et tortor at risus viverra#}
+                {#                    adipiscing at. Et netus et malesuada fames ac turpis egestas integer. Non nisi est sit amet#}
+                {#                    facilisis magna etiam. Auctor urna nunc id cursus metus aliquam eleifend. Sit amet nisl suscipit#}
+                {#                    adipiscing bibendum est ultricies integer. Tempus quam pellentesque nec nam aliquam sem et tortor.#}
+                {#                    Facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris. Cursus sit amet dictum sit amet#}
+                {#                    justo.</p>#}
+                <h3>How you can test yourself?</h3>
+                <p>Simply go to your personal VK-page and copy from the clipboard path to your profile. Paste the link
+                    into the box below ant click the 'Test!' button. Also make sure that your personal page is open for
+                    everyone (or make it open for a brief period of time for testing), otherwise this test will not work
+                    on you.</p>
+                {#                <p>Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Fusce id velit ut#}
+                {#                    tortor pretium viverra. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi.#}
+                {#                    Auctor urna nunc id cursus metus aliquam. Facilisi morbi tempus iaculis urna id volutpat lacus#}
+                {#                    laoreet non.</p>#}
+                <!--
+                    <div align="center">
+                        <textarea placeholder="Enter your personal VK page-address"></textarea>
+                    </div>
+                -->
+                <form method="POST" action="">
+                    <fieldset class="form-group">
+                        {{ form.title(class="form-control form-control-lg") }}
+                    </fieldset>
+                    <div class="form-group" align="center">
+                        {{ form.submit(class="btn btn-info") }}
+                    </div>
+                </form>
+                <!--
+                <div align="center">
+                    <a type="button" class="btn btn-info" data-dismiss="modal"
+                       href="{{ url_for('main.result') }}">Тест</a>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+{% block footercontent %}
+    <a class="btn btn-outline-info" href="{{ url_for('main.about') }}">How does it work?</a>
+{% endblock footercontent %}
