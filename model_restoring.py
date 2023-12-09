@@ -8,6 +8,7 @@ def restore_model(path_without_extension: str):
     loaded_model = model_from_json(loaded_model_json)
     loaded_model.load_weights([path_without_extension + ".h5"])
     json_file.close()
+    print(type(loaded_model))
     return loaded_model
 
 
