@@ -1,12 +1,11 @@
 from flask import Flask
-
-import routes
 from data_restoring import restore_groups
 from model_restoring import restore_model
 
+import routes
+
 app = Flask(__name__)
 app.register_blueprint(routes.main)
-
 app.config['SECRET_KEY'] = 'More than meets the eye'
 
 

@@ -7,12 +7,18 @@ TRY_COUNT = 5
 def get_person_groups(person_url):
     try:
         user_id = scrape_person_id(person_url)
-        for try_ in TRY_COUNT:
+    except Exception:
+        return []
+
+    for try_number in range(TRY_COUNT):
+        try:
             result = scrape_groups(user_id)
             if len(result) > 0:
                 return result
-    except Exception:
-        return []
+        except Exception:
+            pass
+
+    return []
 
 
 def scrape_person_id(person_url):

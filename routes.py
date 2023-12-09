@@ -1,13 +1,13 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request
 
-from wtforms import StringField, SubmitField, TextAreaField
-from wtforms.validators import DataRequired
+from wtforms import StringField, SubmitField
 from flask_wtf import FlaskForm
 
 from data_restoring import scrape_groups_ids
 from webscrapping import get_person_groups
 
 import numpy as np
+
 
 main = Blueprint("main", __name__)
 
@@ -48,8 +48,3 @@ def index():
 @main.route("/about")
 def about():
     return render_template('about.html', title='About')
-
-
-# @main.route("/result", methods=["POST", "GET"])
-# def result(result):
-#     return render_template('result.html', title='Result', result=result)
