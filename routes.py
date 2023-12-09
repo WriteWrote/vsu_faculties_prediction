@@ -1,9 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from flask_wtf import FlaskForm
+from keras.src.models.model import model_from_json
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
-
-from keras.saving.legacy.model_config import model_from_json
 
 main = Blueprint("main", __name__)
 
