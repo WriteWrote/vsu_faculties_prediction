@@ -1,6 +1,6 @@
-def restore_groups(groups_path: str):
+def read_lines(path: str):
     lines = []
-    with open(groups_path, 'r', encoding='utf-8') as file:
+    with open(path, 'r', encoding='utf-8') as file:
         lines = file.read().split('\n')
     file.close()
     return lines
