@@ -6,7 +6,7 @@ website for my VSU graduation work: neuro predicting test
 # Greetings!
 
 ## What is it about?
-This is a project of fourth-grade student of Voronezh State University. It was dedicated to attempt to solve the problem of self-awareness in the aspect of most suiting professional skills and willingness to learn some particular knoledge from the university.
+This is a project of Voronezh State University's master student. It was dedicated to attempt to solve the problem of self-awareness in the aspect of most suiting professional skills and willingness to learn some particular knoledge from the university.
 
 This is the quick but reliable test for young and bold, who want to learn something new about themselves or confirm their own decisions, so they can choose the most suitable for their personal traits faculty of the VSU.
 
