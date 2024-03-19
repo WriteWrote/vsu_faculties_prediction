@@ -16,6 +16,8 @@ The key is a modern approach to the old problem. This project is trying to prove
 In this project specially constructed and trained AI-model takes **digital footprints** of the person performing the test and creates a prediction to which faculty should they try to apply. Model can spot some nontrivial patterns, which may result in surprising predictions!
 
 ## How you can test yourself?
+**Important Note:** Currently this project is not deployed due to the sanctions restrictions. But I'm working on some workarounds.
+
 Simply go to your personal VK-page and copy from the clipboard path to your profile. Paste the link into the box below ant click the 'Test!' button. Also make sure that your personal page is open for everyone (or make it open for a brief period of time for testing), otherwise this test will not work on you.
 
 ## Basic idea of using AI
