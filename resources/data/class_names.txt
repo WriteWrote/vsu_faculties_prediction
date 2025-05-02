@@ -1,2 +1,4 @@
-Art & Culture personality
-Science & Technician personality
+математико-логический
+натуралистический
+социальный
+лингвистический
