@@ -1,5 +1,6 @@
 from gensim.models import Word2Vec
 from keras.models import model_from_json, load_model
+from keras.losses import SparseCategoricalCrossentropy
 from tensorflow.python.keras.losses import SparseCategoricalCrossentropy
 
 

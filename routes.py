@@ -14,8 +14,11 @@ from model_restoring import restore_dnn_model, restore_word2vec_model
 from webscrapping import get_person_groups
 
 import spacy
-# nlp = spacy.load("ru_core_news_sm")
+from spacy.cli import download
+
+# download("ru_core_news_sm")
 import ru_core_news_sm
+nlp = spacy.load("ru_core_news_sm")
 
 main = Blueprint("main", __name__)
 

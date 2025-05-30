@@ -6,7 +6,6 @@ nlp = None
 N_DIM = 25
 
 def read_lines(path: str):
-    lines = []
     with open(path, 'r', encoding='utf-8') as file:
         lines = file.read().split('\n')
     file.close()
@@ -21,10 +20,7 @@ def clean_chinese(text):
     return "".join(c for c in text if "A" <= c <= "Z" or "a" <= c <= "z" or "А" <= c <= "Я" or "а" <= c <= "я")
 
 
-def clean_bag_of_words(unit):
-    global i
-    unit_words = unit
-    i = i + 1
+def clean_bag_of_words(unit_words):
     try:
         unit_words = [w.lower() for w in unit_words]
         unit_words = [clean_with_isalpha(w) for w in unit_words]
@@ -33,7 +29,7 @@ def clean_bag_of_words(unit):
         unit_words = [[token.lemma_ for token in nlp(w)] for w in unit_words]
         unit_words = [stemmer.stem(w[0]) for w in unit_words]
     except Exception:
-        print('catched exception with: ' + str(i))
+        print('catched exception while cleaning')
     print(len(unit_words))
     return unit_words
 
@@ -41,7 +37,7 @@ def clean_bag_of_words(unit):
 def vectorize(word, model):
     try:
         return model.wv[word]
-    except Exception as e:
+    except Exception:
         print(word)
         return [0] * 25
 
