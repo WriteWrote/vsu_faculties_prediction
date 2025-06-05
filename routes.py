@@ -65,6 +65,7 @@ def index():
         else:
             clean_data_vector = numpy.array([process_group_names(user_data, WORD2VEC_MODEL)])
             predictions = DNN_MODEL.predict(clean_data_vector)
+            predictions = numpy.round(predictions, 3)
             result_ = CLASS_NAMES[numpy.argmax(predictions)]
 
         return render_template('result.html',
